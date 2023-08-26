@@ -35,6 +35,7 @@ nada de estos lenguajes. Si quieres aprender luego, te recomendamos ver lo sigui
       }
     </style>
     <!-- Dentro del head puedes agregar también otros scripts de librerías. -->
+    <script src="confetti.js"></script>
     <!-- Fin de head. -->
   </head>
   <!-- Dentro de body puedes añadir y modificar el contenido de la página. -->
@@ -42,6 +43,21 @@ nada de estos lenguajes. Si quieres aprender luego, te recomendamos ver lo sigui
     <h1>¡Hola Daniela!</h1>
   </body>
   <script>
+    const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  for stopping the confetti 
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 30000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+        start();
+        stop();
     // Aquí puedes dejar código JavaScript que se ejecutará cuando la página se cargue.
     // Importante: no debes importar ningún script externo aquí.
     // Para eso, utiliza script src dentro del head.
